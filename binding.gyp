@@ -30,24 +30,6 @@
             4506,  # no definition for inline function
           ],
         }],
-        ['OS not in ["mac", "win"]', {
-          'sources': [
-            'src/keytar_posix.cc',
-          ],
-          'cflags': [
-            '<!(pkg-config --cflags libsecret-1)',
-            '-Wno-missing-field-initializers',
-            '-Wno-deprecated-declarations',
-          ],
-          'link_settings': {
-            'ldflags': [
-              '<!(pkg-config --libs-only-L --libs-only-other libsecret-1)',
-            ],
-            'libraries': [
-              '<!(pkg-config --libs-only-l libsecret-1)',
-            ],
-          },
-        }]
       ],
     }
   ]
